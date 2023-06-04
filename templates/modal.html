@@ -1,0 +1,83 @@
+<div class="modal fade" id="moreInfoModal" tabindex="-1" aria-labelledby="moreInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="moreInfoModalLabel">Подробнее о товаре</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="bodyModal">
+                <!-- Карусель -->
+                <div id="carouselIndicators" class="carousel slide placeholder-glow mb-3">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner mx-auto text-center" style="background-color: #edeef0;">
+                        <div class="carousel-item active">
+                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 placeholder" width="800" height="400"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#777"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Предыдущее</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Следующее</span>
+                    </button>
+                </div>
+                <!-- / Карусель -->
+                <!-- Комментарий -->
+                <h5>Обобщенный комментарий</h5>
+                <p class="placeholder-glow" id="m_comment">
+                    <span class="placeholder col-5"></span>
+                    <span class="placeholder col-2"></span>
+                    <span class="placeholder col-2"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                </p>
+                <!-- / Комментарий -->
+                <!-- Параметры -->
+                <h5>Параметры товара</h5>
+                <table class="table table-hover placeholder-glow">
+                    <thead>
+                    <tr>
+                        <th scope="col">Параметр</th>
+                        <th scope="col">Значение</th>
+                    </tr>
+                    </thead>
+                    <tbody id="m_params">
+                    <tr>
+                        <td><span class="placeholder col-2"></span></td>
+                        <td><span class="placeholder col-3"></span></td>
+                    </tr>
+                    <tr>
+
+                        <td><span class="placeholder col-4"></span></td>
+                        <td><span class="placeholder col-2"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="placeholder col-3"></span></td>
+                        <td><span class="placeholder col-4"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- / Параметры -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Закрыть</button>
+                <a href="#" target="_blank" class="btn btn-outline-primary" id="linkModal">Перейти на сайт</a>
+            </div>
+        </div>
+    </div>
+</div>
