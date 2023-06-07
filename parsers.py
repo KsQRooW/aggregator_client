@@ -1,5 +1,3 @@
-import time
-import json
 import requests
 
 from cache import Cache
@@ -64,12 +62,12 @@ class Cards:
 
     def _request_new_cards(self, search_query: str):
         """Сделать запрос в АПИ парсера товаров"""
-        # requests.get(self.api_url + '/search', data={'input_name': search_query})
+        requests.get(self.api_url + '/search', params={'input_name': search_query})
 
-        # Имитируем реальный запрос
-        time.sleep(2)
-        with open('test_search.json', encoding='utf-8') as file:
-            self.items.extend(json.load(file))
+        # # Имитируем реальный запрос
+        # time.sleep(2)
+        # with open('test_search_full.json', encoding='utf-8') as file:
+        #     self.items.extend(json.load(file))
 
         self.cache.add_item(search_query, self.items)
 

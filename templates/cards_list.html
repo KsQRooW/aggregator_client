@@ -7,27 +7,31 @@
               style="background-color: {{ card.get('rating_color') }};"># {{ card.get('rating') or 0 }}</span>
         <img src="{{ card.get('img') }}" class="card-img-top" alt="Изображение товара"
              style="height: 200px; object-fit: cover;">
-        <div class="card-body">
-            <h6 class="card-title">
-                <span class="badge rounded-pill" style="background-color: {{ card.get('market_color') }};">{{ card.get('market') }}</span>
-                {{ card.get('goods_name') }} <small class="text-body-secondary">{{ card.get('brand_name') or ''
-                }}</small>
-            </h6>
-            <h4>
-                {{ card.get('current_price') }} ₽
-                {% if card.get('old_price') %}
-                <small class="text-body-secondary h6"><s>{{ card.get('old_price') }} ₽</s></small>
-                {% endif %}
-            </h4>
-            <p class="card-text">
-                <i class="bi bi-star"></i> {{ card.get('reviews') or 0 }} <br>
-                <i class="bi bi-chat"></i> {{ card.get('comments') or 0 }}
-            </p>
-            <button type="button" class="btn btn-outline-dark"
-                    onclick="getMoreInfo('{{ card.get('url') }}', '{{ card.get('goods_name') }}')">
-                Подробнее
-            </button>
-            <a href="{{ card.get('url') }}" class="btn btn-outline-primary" target="_blank">Перейти</a>
+        <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between">
+            <div>
+                <h6 class="card-title">
+                    <span class="badge rounded-pill" style="background-color: {{ card.get('market_color') }};">{{ card.get('market') }}</span>
+                    {{ card.get('goods_name') }} <small class="text-body-secondary">{{ card.get('brand_name') or ''
+                    }}</small>
+                </h6>
+                <h4>
+                    {{ card.get('current_price') }} ₽
+                    {% if card.get('old_price') %}
+                    <small class="text-body-secondary h6"><s>{{ card.get('old_price') }} ₽</s></small>
+                    {% endif %}
+                </h4>
+                <p class="card-text">
+                    <i class="bi bi-star"></i> {{ card.get('reviews') or 0 }} <br>
+                    <i class="bi bi-chat"></i> {{ card.get('comments') or 0 }}
+                </p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-dark"
+                        onclick="getMoreInfo('{{ card.get('url') }}', '{{ card.get('goods_name') }}')">
+                    Подробнее
+                </button>
+                <a href="{{ card.get('url') }}" class="btn btn-outline-primary" target="_blank">Перейти</a>
+            </div>
         </div>
         <div class="card-footer text-primary">
             <small class="text-muted">Обновлено 1 мин назад</small>
